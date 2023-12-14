@@ -1,0 +1,3 @@
+#!C:\Users\omar.KIU\Desktop\Django_Projects\myproject\venv\Scripts\python.exe
+from numba.pycc import main
+main()

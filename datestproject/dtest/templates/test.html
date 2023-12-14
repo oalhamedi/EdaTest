@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Test - {{ block.super}} {% endblock %}
+
+{% block content %}
+<!-- Header -->
+					<header id="header">
+						<div class="content">
+							<div class="inner">
+	                          <article id="test">
+								<h2 class="major">TEST</h2>
+								<h6>Chose the file must be csv or xlsx format.</h6><br/>
+                                <form method="post" action="#" enctype="multipart/form-data">
+									{% csrf_token %}
+									<input type="file" name="document" id="document" required="required">
+									<button id="submit" class="btn-primary">Upload</button>
+
+								</form>
+								</article>
+                         </div>
+							</div>
+
+							<!-- Contact -->
+						{% block messages %}
+						   {% if messages %}
+						      {% for message in messages %}
+						         <code>{{ message }}</code>
+						      {% endfor%}
+						   {% endif %}
+						{% endblock %}
+
+
+					</header>
+
+
+
+
+
+
+
+
+ {% endblock %}
+

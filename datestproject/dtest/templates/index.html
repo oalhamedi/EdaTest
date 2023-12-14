@@ -1,0 +1,114 @@
+
+{% extends 'base.html' %}
+{% load static %}
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+	{% block content %}
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>EDaTest</h1>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#about">About</a></li>
+								<!--<li><a href="#contact">Contact</a></li>
+								<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+						<div class="logo">
+							<span><a href="{% url 'test' %}" >BEGIN</a></span>
+						</div>
+
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="{% static 'images/d2.jpg' %}" alt="" /></span>
+								<p>Welcome everyone to EDATEST.</p>
+								<p>EDATEST your data speaks.</p>
+								<p>EDATEST means Exploratory Data Analysis Test.</p>
+								<p>Through this site, you can easily explore and analyze your data.</p>
+								<p>This site provides a great service for everyone, both analysts and non-analysts.</p>
+								<p>Try for yourself and test it out.</p>
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Work</h2>
+								<span class="image main"><img src="{% static 'images/d1.jpg' %}" alt="" /></span>
+								<p>EDATEST just choose your data and click a button to get the result.</p>
+								<p>1- Number of rows, columns and missing data.</p>
+								<p>2- Info: The information contains the number of columns, column labels, column data types, memory usage, range index, and the number of cells in each column (non-null values).</p>
+								<p>3- Describe: Description of the data, If the Data contains numerical data, the description contains these information for each column: count, mean, std, min, 25%, 50%, 75%, max.</p>
+								<p>4- Head: The first 5 rows from top data.</p>
+								<p>5- Tail: The last 5 rows from bottom data.</p>
+								<p>6- Correlation: The measure of the linear relationship between the two variables in data.</p>
+								<p>7- Heatmap: A graphical representation of data where each value of a matrix is represented as a color.</p>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="{% static 'images/d3.jpg' %}" alt="" /></span>
+								<p>Simply put, at EDATEST we believe that every Data Administrator can understand and analyze their own data.</p>
+								<p>Our goal is to remove any technical barriers that can prevent you from exploring your data. Our powerful tools enable everyone to analyze and test data. Whether you're a beginner or analysis expert, we're excited to help you on your journey!</p>
+								<p>After seeing an increased need for data, the EDATEST builder was born. We wanted to offer a data exploration platform that would require no coding skills or analysis experience.</p>
+							</article>
+
+						<!-- Contact -->
+<!--
+
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">{% csrf_token %}
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="email" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+
+							</article>
+-->
+
+
+					</div>
+ {% endblock %}
+

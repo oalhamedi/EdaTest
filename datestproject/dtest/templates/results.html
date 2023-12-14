@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Result - {{ block.super}} {% endblock %}
+
+{% block content %}
+<!-- Header -->
+					<header id="header">
+
+
+
+						{% block messages %}
+						   {% if messages %}
+						      {% for message in messages %}
+						<div class="logo"><span class="icon fa-gem"></span></div>
+						<h6 class="major">THE RESULT</h6><code>{{ message }}</code>
+						<br/>
+							  {% endfor%}
+						   {% endif %}
+						{% endblock %}
+
+						<div class="logo"><span class="icon fa-gem"></span></div>
+						<h6 class="major">Data Information</h6><code>{{dinfo|safe}}</code>
+
+						<div class="logo"><span class="icon fa-gem"></span></div>
+						<h6 class="major">Data Describe</h6><code>{{ddesc|safe}}</code>
+
+						<table>
+						<tr><div class="logo"><span class="icon fa-gem"></span></div></tr>
+						<tr><h6 class="major">Data Head</h6>{{dhead|safe}}</tr>
+						</table>
+
+
+
+						<div class="logo"><span class="icon fa-gem"></span></div>
+						<h6 class="major">Data Tail</h6><code>{{dtail|safe}}</code>
+
+						<div class="logo"><span class="icon fa-gem"></span></div>
+						<h6 class="major">Data Correlation</h6><code>{{dcor|safe}}</code>
+
+						<div class="logo"><span class="icon fa-gem"></span></div>
+						<h6 class="major">Heat Map</h6>
+						<img src="data:image/png;base64,{{chart|safe}}" alt="" width=500 height=auto/>
+
+
+
+
+							<!-- Contact -->
+
+
+					</header>
+
+
+
+
+
+
+ {% endblock %}
+
+
+
+

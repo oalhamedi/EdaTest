@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Contact - {{ block.super}} {% endblock %}
+
+{% block content %}
+<!-- Header -->
+					<header id="header">
+
+                        {% if message_name %}
+						<div class="content">
+							<div class="inner">
+						<center>
+							<article id="result">
+							<h4><code>The email has been sent</code></h4><br/>
+							<h6>Thanks {{message_name}} we are reseive the message</h6>
+							</article>
+					    </center>
+						<br/><br/><br/>
+						</div>
+							</div>
+
+						{% else %}
+
+						<div class="content">
+							<div class="inner">
+								<article id="test">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">{% csrf_token %}
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="email" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+
+							</article>
+							</div>
+						</div>
+
+
+						{% endif %}
+
+
+
+					</header>
+
+				<!-- Main -->
+
+
+
+
+
+
+
+
+ {% endblock %}
+

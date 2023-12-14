@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+	<head>
+		<title>{% block title %} DaTest {% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}" />
+		<link rel="stylesheet" href="{% static 'assets/css/app.css'%}" />
+		<noscript><link rel="stylesheet" href= "{% static 'assets/css/noscript.css' %}" /></noscript>	</head>
+
+	<body class="is-preload">
+
+	   	<!-- Container -->
+	        <nav class="navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="{% url 'index' %}" >EDATEST</a>
+
+                <div class="navlist-right">
+                    <form class="form-inline ml-auto">
+                <a href="{% url 'test' %}" class="navbar-brand" >TEST</a>
+                <a href="{% url 'contact' %}" class="navbar-brand">CONTACT</a>
+            </form>
+
+                </div>
+                </div>
+
+			</nav>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+			    {% block content %}
+                {% endblock %}
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p>&copy; 2022 EDATEST. All rights reserved</p>
+					</footer>
+
+			</div>
+
+		<!-- BG <div id="bg"></div> -->
+
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+
+</html>
