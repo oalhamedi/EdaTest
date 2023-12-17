@@ -4,7 +4,7 @@ EDATEST the data speaks.
 
 EDATEST means Exploratory Data Analysis Test.
 
-Through this , you can easily explore and analyze your data.
+Through this, you can easily explore and analyze your data.
 
 Simply put, at EDATEST we believe that every Data Administrator can understand and analyze their own data.
 
